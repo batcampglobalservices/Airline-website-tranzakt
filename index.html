@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Flight Search UI</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<link rel="stylesheet" href="assets/css/index.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="nav-groups">
+        <div class="nav-left">
+            <a class="nav-link" href="#">Flights</a>
+            <a class="nav-link" href="#">Hotels</a>
+        </div>
+
+        <div class="nav-center">
+            <a class="nav-link" href="#">Explore</a>
+            <a class="nav-link" href="#">About Us</a>
+        </div>
+
+        <div class="nav-right">
+            <a class="nav-link" href="#"><i class="fa-regular fa-user"></i> Sign In</a>
+            <a class="register-btn" href="#">Register</a>
+        </div>
+    </div>
+</div>
+<header class="header-main">
+    
+    <!-- Left: Logo + Text -->
+    <div class="header-logo-container">
+      <!-- Your real logo (replace with your actual image URL) -->
+      <img src="/assets/images/logo.png" 
+           alt="TradeBrigade Logo" 
+           class="header-logo">
+
+     
+    </div>
+
+  </header>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>THE SMART WAY TO FLY</h1>
+    <p>Experience Seamless Travel With Our Comprehensive Booking Platform. Book Flights, Hotels, And Cars All In One Place. Discover New Destinations And Create Unforgettable Memories.</p>
+</div>
+
+<!-- SEARCH BOX -->
+<div class="search-box">
+    <div class="tabs">
+        <div class="tab active" id="flightTab"><i class="fa-solid fa-plane"></i> FLIGHTS</div>
+        <div class="tab" id="carTab"><i class="fa-solid fa-car"></i> Cars</div>
+    </div>
+
+    <div class="form-section" id="flightForm">
+        <div class="radio-row">
+            <label><input type="radio" name="trip" checked> Round Trip</label>
+            <label><input type="radio" name="trip"> One Way</label>
+        </div>
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label>From</label>
+                <select>
+                    <option>Departure City</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>To</label>
+                <select>
+                    <option>Arrival City</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Departure Date</label>
+                <input type="date" />
+            </div>
+            <div class="form-group">
+                <label>Return Date</label>
+                <input type="date" />
+            </div>
+        </div>
+
+        <div class="form-grid form-grid--secondary">
+            <div class="form-group">
+                <label>Passengers</label>
+                <select>
+                    <option>Passengers</option>
+                </select>
+            </div>
+        </div>
+
+        <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i> Search Flights</button>
+    </div>
+</div>
+<!-- SERVICES -->
+<section class="services-section-wrapper">
+  <div class="services-container">
+
+    <!-- Heading -->
+    <div class="services-header">
+      <h2 class="services-title">
+        OUR SERVICES
+      </h2>
+      <p class="services-description">
+        everything you need for your perfect journey, all in one place. from booking to exploration, we've got you covered.
+      </p>
+    </div>
+
+    <!-- TOP GRID -->
+    <div class="services-grid">
+
+      <!-- Card -->
+      <article class="service-card">
+        <div class="service-card-header service-card-header--flights">
+          <div class="service-card-overlay"></div>
+
+          <!-- ICON -->
+          <div class="service-card-icon">
+            <i class="fa-solid fa-plane"></i>
+          </div>
+        </div>
+
+        <div class="service-card-body">
+          <h3 class="service-card-title">FLIGHTS</h3>
+          <p class="service-card-description">
+            book flights to over 1000 destinations worldwide with competitive prices and flexible options.
+          </p>
+        </div>
+      </article>
+
+      <!-- Card -->
+      <article class="service-card">
+        <div class="service-card-header service-card-header--hotels">
+          <div class="service-card-overlay"></div>
+
+          <!-- ICON -->
+          <div class="service-card-icon">
+            <i class="fa-solid fa-hotel"></i>
+          </div>
+        </div>
+
+        <div class="service-card-body">
+          <h3 class="service-card-title">HOTELS</h3>
+          <p class="service-card-description">
+            choose from luxury resorts to budget-friendly stays. find your perfect accommodation anywhere.
+          </p>
+        </div>
+      </article>
+
+      <!-- Card -->
+      <article class="service-card">
+        <div class="service-card-header service-card-header--cars">
+          <div class="service-card-overlay"></div>
+
+          <div class="service-card-icon">
+            <i class="fa-solid fa-car"></i>
+          </div>
+        </div>
+
+        <div class="service-card-body">
+          <h3 class="service-card-title">CAR RENTALS</h3>
+          <p class="service-card-description">
+            rent a car with ease. choose from economy to luxury vehicles for your journey.
+          </p>
+        </div>
+      </article>
+
+      <!-- Card -->
+      <article class="service-card">
+        <div class="service-card-header service-card-header--trains">
+          <div class="service-card-overlay"></div>
+
+          <div class="service-card-icon">
+            <i class="fa-solid fa-train"></i>
+          </div>
+        </div>
+
+        <div class="service-card-body">
+          <h3 class="service-card-title">TRAIN TICKETS</h3>
+          <p class="service-card-description">
+            travel comfortably by rail. book train tickets across multiple networks and routes.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- BOTTOM GRID -->
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="feature-card-icon feature-card-icon--blue">
+          <i class="fa-solid fa-book"></i>
+        </div>
+        <h4 class="feature-card-title">DESTINATION GUIDES</h4>
+        <p class="feature-card-description">explore detailed guides for cities worldwide</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-card-icon feature-card-icon--cyan">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h4 class="feature-card-title">TRAVEL INSURANCE</h4>
+        <p class="feature-card-description">comprehensive coverage for peace of mind</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-card-icon feature-card-icon--sky">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <h4 class="feature-card-title">24/7 SUPPORT</h4>
+        <p class="feature-card-description">round-the-clock customer assistance</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-card-icon feature-card-icon--yellow">
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <h4 class="feature-card-title">LOYALTY REWARDS</h4>
+        <p class="feature-card-description">earn points and exclusive benefits</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="destinations-section-wrapper">
+  <div class="destinations-container">
+    <!-- SECTION TITLE -->
+    <div class="destinations-header">
+      <h3 class="destinations-subtitle">
+        EXPLORE TOP DESTINATIONS
+      </h3>
+      <p class="destinations-description">
+        Discover amazing places around the world. Get inspired and start planning your
+        next adventure.
+      </p>
+
+      <!-- GRID -->
+      <div class="destinations-grid">
+
+        <!-- CARD START -->
+        <div class="destination-card">
+
+          <!-- IMAGE HERE -->
+          <div
+            class="destination-card-image"
+            style="background-image: url('/assets/images/london.png');">
+          </div>
+
+          <!-- GRADIENT OVERLAY -->
+          <div class="destination-card-overlay"></div>
+
+          <!-- LOCATION BADGE -->
+          <div class="destination-card-badge-wrapper">
+            <div class="destination-card-badge">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>London</span>
+            </div>
+          </div>
+
+          <!-- TEXT CONTENT -->
+          <div class="destination-card-content">
+            <p class="destination-card-description">
+              The city of light awaits with iconic landmarks and world-class cuisine.
+            </p>
+            <p class="destination-card-price">
+              From $1,384.89
+            </p>
+          </div>
+        </div>
+        <!-- CARD END -->
+
+        <!-- COPY CARD FOR MORE DESTINATIONS -->
+        <div class="destination-card">
+          <div
+            class="destination-card-image"
+            style="background-image: url('/assets/images/sydney.png');">
+          </div>
+          <div class="destination-card-overlay"></div>
+          <div class="destination-card-badge-wrapper">
+            <div class="destination-card-badge">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Sydney</span>
+            </div>
+          </div>
+          <div class="destination-card-content">
+            <p class="destination-card-description">
+              Experience luxury and innovation in this modern oasis.
+            </p>
+            <p class="destination-card-price">From $1,200.92</p>
+          </div>
+        </div>
+
+        <!-- Repeat for Toronto -->
+        <div class="destination-card">
+          <div
+            class="destination-card-image"
+            style="background-image: url('/assets/images/toronto.png');">
+          </div>
+          <div class="destination-card-overlay"></div>
+          <div class="destination-card-badge-wrapper">
+            <div class="destination-card-badge">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Toronto</span>
+            </div>
+          </div>
+          <div class="destination-card-content">
+            <p class="destination-card-description">
+              Where ancient tradition meets cutting-edge technology.
+            </p>
+            <p class="destination-card-price">From $1,202.23</p>
+          </div>
+        </div>
+
+        <!-- Repeat for New York -->
+        <div class="destination-card">
+          <div
+            class="destination-card-image"
+            style="background-image: url('/assets/images/nyk.png');">
+          </div>
+          <div class="destination-card-overlay"></div>
+          <div class="destination-card-badge-wrapper">
+            <div class="destination-card-badge">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>New York</span>
+            </div>
+          </div>
+          <div class="destination-card-content">
+            <p class="destination-card-description">
+              Discover vibrant culture and iconic skylines.
+            </p>
+            <p class="destination-card-price">From $1,434.82</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- DISCOUNTED SECTION (same structure) -->
+    <div class="discounted-destinations-section">
+      <h3 class="discounted-destinations-title">
+        EXPLORE TOP DISCOUNTED DESTINATIONS
+      </h3>
+
+      <div class="discounted-destinations-grid">
+
+        <!-- Paris -->
+        <div class="destination-card destination-card--discounted">
+          <div class="destination-card-image"
+            style="background-image: url('/assets/images/london.png');"></div>
+          <div class="destination-card-overlay"></div>
+
+          <div class="destination-card-badge-wrapper">
+            <div class="destination-card-badge">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Paris</span>
+            </div>
+          </div>
+
+          <div class="destination-card-content">
+            <p class="destination-card-price">
+              From $1,610.92 <span class="destination-card-strikethrough">$1800</span>
+            </p>
+          </div>
+        </div>
+        
+
+        <!-- Dubai Destination -->
+        <div class="destination-card">
+          <div class="destination-card-image"
+            style="background-image: url('/assets/images/nyk.png');"></div>
+          <div class="destination-card-overlay"></div>
+
+          <div class="destination-card-badge-wrapper">
+            <div class="destination-card-badge">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Dubai</span>
+            </div>
+          </div>
+
+          <div class="destination-card-content">
+            <p class="destination-card-price">
+              From $1,610.92 <span class="destination-card-strikethrough">$1800</span>
+            </p>
+          </div>
+        </div>
+        <!-- Rome Destination -->
+        <div class="destination-card">
+          <div class="destination-card-image"
+            style="background-image: url('/assets/images/toronto.png');"></div>
+          <div class="destination-card-overlay"></div>
+
+          <div class="destination-card-badge-wrapper">
+            <div class="destination-card-badge">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Rome</span>
+            </div>
+          </div>
+
+          <div class="destination-card-content">
+            <p class="destination-card-price">
+              From $1,610.92 <span class="destination-card-strikethrough">$1800</span>
+            </p>
+          </div>
+        </div>
+        <!-- Tokyo Destination -->
+        <div class="destination-card">
+          <div class="destination-card-image"
+            style="background-image: url('/assets/images/sydney.png');"></div>
+          <div class="destination-card-overlay"></div>
+
+          <div class="destination-card-badge-wrapper">
+            <div class="destination-card-badge">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Tokyo</span>
+            </div>
+          </div>
+
+          <div class="destination-card-content">
+            <p class="destination-card-price">
+              From $1,610.92 <span class="destination-card-strikethrough">$1800</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="trust-section-wrapper">
+  <div class="trust-section-container">
+
+    <!-- TITLE -->
+    <h2 class="trust-section-title">
+      WHY CHOOSE TRANZ-TERRAMIGRATE
+    </h2>
+
+    <p class="trust-section-description">
+      Experience The Difference With Our Commitment To Excellence, Value, And Customer Satisfaction.
+    </p>
+
+    <!-- GRID -->
+    <div class="trust-cards-grid">
+
+      <!-- CARD -->
+      <div class="trust-card">
+        <div class="trust-card-icon">
+          <i class="fa-solid fa-dollar-sign"></i>
+        </div>
+        <h3 class="trust-card-title">Best Price Guarantee</h3>
+        <p class="trust-card-description">
+          We match any lower price you find, ensuring you always get the best deal available.
+        </p>
+      </div>
+
+      <!-- CARD -->
+      <div class="trust-card">
+        <div class="trust-card-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h3 class="trust-card-title">Secure Booking</h3>
+        <p class="trust-card-description">
+          Your data is protected with industry-leading encryption and security measures.
+        </p>
+      </div>
+
+      <!-- CARD -->
+      <div class="trust-card">
+        <div class="trust-card-icon">
+          <i class="fa-solid fa-earth-americas"></i>
+        </div>
+        <h3 class="trust-card-title">Global Coverage</h3>
+        <p class="trust-card-description">
+          Access to 1000+ destinations worldwide with flights, hotels, cars, and trains.
+        </p>
+      </div>
+
+      <!-- CARD -->
+      <div class="trust-card">
+        <div class="trust-card-icon">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <h3 class="trust-card-title">24/7 Customer Support</h3>
+        <p class="trust-card-description">
+          Our dedicated team is always available to assist you, anywhere, anytime.
+        </p>
+      </div>
+
+      <!-- CARD -->
+      <div class="trust-card">
+        <div class="trust-card-icon">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <h3 class="trust-card-title">Trusted by Millions</h3>
+        <p class="trust-card-description">
+          Join over 5 million satisfied travellers who choose us for their journeys.
+        </p>
+      </div>
+
+      <!-- CARD -->
+      <div class="trust-card">
+        <div class="trust-card-icon">
+          <i class="fa-solid fa-arrows-rotate"></i>
+        </div>
+        <h3 class="trust-card-title">Flexible Booking</h3>
+        <p class="trust-card-description">
+          Easy modifications and cancellations with transparent policies and no hidden fees.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="about-section-wrapper">
+  <div class="about-section-grid">
+
+    <!-- Left Column -->
+    <div class="about-section-content">
+      <h2 class="about-section-title">
+        ABOUT TRANZ-TERAMIGRATE
+      </h2>
+
+      <div class="about-section-text">
+        <p>
+          Teramigrate Is Your Trusted Partner In Creating Unforgettable Travel Experiences. From Flights To Hotels, Cars To Trains — We've Got Everything Covered.
+        </p>
+        <p>
+          Our Comprehensive Platform Brings Together The Best Deals From Airlines, Hotels, Car Rental Companies, And Rail Networks, Giving You The Freedom To Plan Your Perfect Journey With Confidence. Whether You're Traveling For Business Or Leisure, We're Here To Make Every Step Seamless.
+        </p>
+      </div>
+
+      <div class="about-mission-vision-grid">
+        <!-- Mission -->
+        <div class="about-mission-vision-item">
+          <div class="about-icon about-icon-blue">
+            <svg class="about-icon-svg" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="about-mission-vision-title">Our Mission</h3>
+            <p class="about-mission-vision-text">To Connect The World Through Seamless, Affordable Travel Experiences.</p>
+          </div>
+        </div>
+
+        <!-- Vision -->
+        <div class="about-mission-vision-item">
+          <div class="about-icon about-icon-teal">
+            <svg class="about-icon-svg" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="about-mission-vision-title">Our Vision</h3>
+            <p class="about-mission-vision-text">To Be The World's Most Trusted And Comprehensive Travel Platform.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column - Core Values -->
+    <div class="about-values-card">
+      <div class="about-values-header">
+        <div class="about-values-icon">
+          <svg class="about-values-icon-svg" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+          </svg>
+        </div>
+        <h3 class="about-values-title">OUR CORE VALUES</h3>
+      </div>
+
+      <div class="about-values-list">
+        <!-- Customer First -->
+        <div class="about-value-item">
+          <div class="about-value-bullet"></div>
+          <div>
+            <h4 class="about-value-title">Customer First</h4>
+            <p class="about-value-description">Every Decision We Make Is Guided By What's Best For Our Travelers. Your Satisfaction Is Our Success.</p>
+          </div>
+        </div>
+
+        <!-- Innovation -->
+        <div class="about-value-item">
+          <div class="about-value-bullet"></div>
+          <div>
+            <h4 class="about-value-title">Innovation</h4>
+            <p class="about-value-description">We Continuously Evolve Our Platform With Cutting-Edge Technology To Enhance Your Booking Experience.</p>
+          </div>
+        </div>
+
+        <!-- Transparency -->
+        <div class="about-value-item">
+          <div class="about-value-bullet"></div>
+          <div>
+            <h4 class="about-value-title">Transparency</h4>
+            <p class="about-value-description">No Hidden Fees, No Surprises. We Believe In Honest, Straightforward Pricing And Clear Communication.</p>
+          </div>
+        </div>
+
+        <!-- Reliability -->
+        <div class="about-value-item">
+          <div class="about-value-bullet"></div>
+          <div>
+            <h4 class="about-value-title">Reliability</h4>
+            <p class="about-value-description">Count On Us For Dependable Service, Accurate Information, And Support Whenever You Need It.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer-section">
+  <div class="footer-container">
+    <div class="footer-grid">
+
+      <!-- Column 1: Brand + Contact -->
+      <div class="footer-brand-column">
+        <div class="footer-brand-info">
+          <h3 class="footer-brand-title">
+            Your Trusted Partner For Seamless Travel Experiences.
+          </h3>
+          <p class="footer-brand-description">
+            Book Flights, Hotels, Cars, And Trains All In One Place.<br />
+            support@tranz-teramigrate.com
+          </p>
+        </div>
+
+        <div class="footer-contact-info">
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <span>+1 (555) 123-4567</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg class="footer-contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span>123 Travel Street, NY 10001</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="footer-column">
+        <h4 class="footer-column-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#" class="footer-link">Flights</a></li>
+          <li><a href="#" class="footer-link">Hotels</a></li>
+          <li><a href="#" class="footer-link">Cars</a></li>
+          <li><a href="#" class="footer-link">Explore</a></li>
+          <li><a href="#" class="footer-link">Deals</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Support -->
+      <div class="footer-column">
+        <h4 class="footer-column-title">Support</h4>
+        <ul class="footer-links">
+          <li><a href="#" class="footer-link">Help Center</a></li>
+          <li><a href="#" class="footer-link">Contact Us</a></li>
+          <li><a href="#" class="footer-link">Booking FAQs</a></li>
+          <li><a href="#" class="footer-link">Travel Guides</a></li>
+          <li><a href="#" class="footer-link">Travel Insurance</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Legal -->
+      <div class="footer-column">
+        <h4 class="footer-column-title">Legal</h4>
+        <ul class="footer-links">
+          <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-link">Cookie Policy</a></li>
+          <li><a href="#" class="footer-link">Accessibility</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="footer-divider" />
+
+    <!-- Newsletter + Copyright -->
+    <div class="footer-bottom">
+      <div class="footer-newsletter">
+        <h4 class="footer-newsletter-title">SUBSCRIBE TO OUR NEWSLETTER</h4>
+        <p class="footer-newsletter-text">Get Exclusive Deals And Travel Inspiration Delivered To Your Inbox</p>
+        <form class="footer-newsletter-form">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="footer-newsletter-input"
+          />
+          <button class="footer-newsletter-button">
+            Subscribe
+          </button>
+        </form>
+      </div>
+
+      <div class="footer-copyright">
+        <p class="footer-copyright-text">© 2025 Tranz-Teramigrate. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#" class="footer-social-link">
+            <svg class="footer-social-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385h-3.047v-3.47h3.047v-2.648c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.512c-1.491 0-1.956.925-1.956 1.874v2.255h3.328l-.532 3.47h-2.796v8.385c5.737-.9 10.125-5.864 10.125-11.854z"/></svg>
+          </a>
+          <a href="#" class="footer-social-link">
+            <svg class="footer-social-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.906-2.06-1.472-3.4-1.472-2.572 0-4.658 2.086-4.658 4.658 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.138 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"/></svg>
+          </a>
+          <a href="#" class="footer-social-link">
+            <svg class="footer-social-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0c-6.627 0-12.017 5.39-12.017 12.017 0 5.283 3.429 9.76 8.17 11.335.597.11 1.629-.26 1.629-.577 0-.285-.01-.618-.016-1.123-3.32.722-4.022-1.6-4.022-1.6-.543-1.38-1.326-1.747-1.326-1.747-1.085-.743.083-.728.083-.728 1.2.084 1.832 1.23 1.832 1.23 1.067 1.832 2.802 1.304 3.486.996.108-.774.418-1.304.76-1.605-2.665-.304-5.466-1.332-5.466-5.93 0-1.31.469-2.382 1.236-3.22-.124-.304-.537-1.527.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013-.403c1.018.005 2.043.138 3 .403 2.29-1.552 3.297-1.23 3.297-1.23.655 1.65.242 2.872.118 3.176.77.838 1.235 1.91 1.235 3.22 0 4.61-2.807 5.623-5.48 5.92.43.372.815 1.103.815 2.222 0 1.606-.014 2.898-.014 3.293 0 .32 1.038.694 1.64.577 4.738-1.575 8.165-6.052 8.165-11.335 0-6.627-5.39-12.017-12.017-12.017z"/></svg>
+          </a>
+          <a href="#" class="footer-social-link">
+            <svg class="footer-social-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M19.998 3h-16c-1.105 0-1.998.895-1.998 2v14c0 1.105.893 2 1.998 2h16c1.105 0 2-.895 2-2v-14c0-1.105-.895-2-2-2zm-13 4h3v10h-3v-10zm1.5-2c-.828 0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5 1.5-.672 1.5-1.5-.672-1.5-1.5-1.5zm11.5 12h-3v-5.5c0-1.378-1.122-2.5-2.5-2.5s-2.5 1.122-2.5 2.5v5.5h-3v-10h3v1.5c.5-.75 1.5-1.5 2.5-1.5 2.485 0 3.5 1.5 3.5 4v6z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="./assets/js/index.js"></script>
+
+</body>
+</html>
